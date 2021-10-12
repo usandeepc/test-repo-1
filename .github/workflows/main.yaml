@@ -27,4 +27,4 @@ jobs:
         run: sudo apt install -y s-nail
         
       - name: Send an email
-        run: echo "Test From Sandeep" | s-nail -v -s "Test" -S smtp-auth=login -S smtp=smtp://smtp.gmail.com:587 -S from="sandeep.uppala0604@gmail.com" -S smtp-auth-user=${{ secrets.MAIL_USER_NAME }} -S smtp-auth-password=${{ secrets.MAIL_PASSWORD }} sandeepchowdaryu@gmail.com
+        run: echo "Test From Sandeep" | s-nail -v -s "Test" -S smtp-use-starttls -S smtp-auth=login -S smtp=smtp://smtp.gmail.com:587 -S from="sandeep.uppala0604@gmail.com" -S smtp-auth-user=${{ secrets.MAIL_USER_NAME }} -S smtp-auth-password=${{ secrets.MAIL_PASSWORD }} sandeepchowdaryu@gmail.com
